@@ -6,6 +6,8 @@ This repo contains
 - a [builder](./builder/) package that can build the app programmatically in cases where you'd like to build different copies of the app containing different datasets
 - a [demo](./demo) package that shows how you might use the builder to create a distinct copy of the app
 
+Ready to get started? Skip to [the setup instructions](#setup-and-usage-instructions).
+
 ## Why would I use this?
 
 If you don't already have a good reason in mind, you probably shouldn't use this. A one-file bundle doesn't make sense for most production applications. But it's handy for creating prototypes and simple tools that are easy to share, with no env setup required.
@@ -24,7 +26,7 @@ The project has ready-to-use UI components such as buttons and tabs, thanks to [
 
 The app can access and use any data you provide in JSON format. The app can't persist data between page loads out of the box. Persistent data is out of the scope of this project, but you could achieve it with `localStorage` or another data store if desired.
 
-The app's "database" is [a `.ts` file](app/src/db/data.ts) that you can update with your own data before building the app. Any data you store in that file will be available in [the `App` component](src/App.tsx) as `dbData`.
+The app's "database" is [a `.ts` file](app/src/db/data.ts) that you can update with your own data before building the app. Any data you store in that file will be available in [the `App` component](app/src/App.tsx) as `dbData`.
 
 To change the "database" data, either edit [app/src/db/data.ts](app/src/db/data.ts), or pass the desired data to the `builder` when programmatically creating a copy of the app.
 
@@ -71,7 +73,7 @@ You should see output that looks something like this:
   ➜  press h + enter to show help
 ```
 
-In your browser, visit the provided address (`http://localhost:5173` in the above example), and you should see a demo page. The demo page will automatically update in the browser when you change the app code. Try changing some of the verbiage in `src/App.tsx`.
+In your browser, visit the provided address (`http://localhost:5173` in the above example), and you should see a demo page. The demo page will automatically update in the browser when you change the app code. Try changing some of the verbiage in `app/src/App.tsx`.
 
 ### Build a copy of the app programmatically
 
