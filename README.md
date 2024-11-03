@@ -10,7 +10,7 @@ Ready to get started? Skip to [the setup instructions](#setup-and-usage-instruct
 
 ## Why would I use this?
 
-If you don't already have a good reason in mind, you probably shouldn't use this. A one-file bundle doesn't make sense for most production applications. But it's handy for creating prototypes and simple tools that are easy to share, with no env setup required.
+Unless you already have a good reason in mind, you probably shouldn't use this. A one-file bundle doesn't make sense for most production applications. But it's handy for creating prototypes and simple tools that are easy to share, with no env setup required.
 
 It's also useful for injecting applications into environments that will only accept vanilla HTML/JS/CSS code. Again, this is usually a bad idea in production, but it makes sense in some local builds. This project was originally created to inject an interactive debugging console into a [Hugo site](https://gohugo.io/), but only when serving the site locally for development purposes.
 
