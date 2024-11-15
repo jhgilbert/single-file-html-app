@@ -31,13 +31,9 @@ const ExampleWrapper = styled.div`
 `;
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
   const [rating, setRating] = useState<number | null>(null);
   const [dbData, setDbData] = useState<DbData>(dbDataOnDisk);
-
-  const updateDbData = (newData: DbData) => {
-    setDbData(newData);
-  };
 
   return (
     <>
@@ -115,7 +111,7 @@ function App() {
         <p>Press the button below to update the data shown above.</p>
         <Button
           onClick={() => {
-            updateDbData({
+            setDbData({
               msg: "Hello, entire universe!",
             });
           }}
