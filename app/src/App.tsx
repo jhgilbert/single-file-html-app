@@ -95,18 +95,19 @@ function App() {
           a dataset.
         </p>
         <p>
-          Add your data to <code>src/db.ts</code>, and it will be available to
-          your app as <code>dbData</code>.
+          Add your data to <code>src/db/data.ts</code> (and update the
+          corresponding type in <code>src/db/types.ts</code>), and your data
+          will be available to your app as <code>dbData</code>.
         </p>
         <p>
-          The data below comes from <code>src/db.ts</code> and is imported at
-          the top of <code>src/App.tsx</code>. Any other component can accept it
-          (or a subset of it) as a prop, and use the data in some way.
+          The data below comes from <code>src/db/data.ts</code> and is imported
+          at the top of <code>src/App.tsx</code>. Any other component can accept
+          it (or a subset of it) as a prop, and use the data in some way.
         </p>
         <pre>{JSON.stringify(dbData, null, 2)}</pre>
         <p>
-          This data can be updated in memory using <code>setDbData()</code>, but
-          does not persist between page loads.
+          This data can be updated in memory using <code>setDbData()</code> as
+          in the example below, but updates do not persist between page loads.
         </p>
         <p>Press the button below to update the data shown above.</p>
         <Button
